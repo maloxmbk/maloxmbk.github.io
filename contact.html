@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="contact.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/> <!--site web externe pour les icones-->
+        <title>Contact</title>
+    </head>
+    <body>
+        <div class="header">
+            <!--logo du site-->
+            <div class="hlogo">
+                <img src="img/logo jeu.png" alt="Logo du site">
+            </div>
+            <!--menu déroulant-->
+            <div class="hcategories">
+                <ul>
+                    <li class="a-sous-classe">
+                        <a href="index.html">MAGASIN</a>
+                        <ul class="sous-classe">
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="/">Liste de découvertes</a></li>
+                            <li><a href="/">Liste de souhaits</a></li>
+                            <li><a href="/">Actualités</a></li>
+                            <li><a href="/">À propos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul> 
+            </div>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div class="coté-gauche">
+                    <div class="address details">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="topic">Adresse</div>
+                        <div class="texte-un">Rue Félix Hap 14</div>
+                        <div class="texte-deux">1040 Bruxelles</div>
+                    </div>
+                    <div class="phone details">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="topic">Téléphone</div>
+                        <div class="texte-un">+32 (0)2 735 81 10.</div>
+                        <div class="texte-deux">+32 (0)2 732 56 27</div>
+                    </div>
+                    <div class="email details">
+                        <i class="fas fa-envelope"></i>
+                        <div class="topic">Email</div>
+                        <div class="texte-un">info@isj.be</div>
+                    </div>
+                </div>
+                <div class="coté-droit">
+                    <div class="topic-text">Envoyez-nous un message</div>
+                    <p>si vous avez un problème ou une question, n'hésitez pas à nous contacter.</p>
+                    <form action="#" method="post">
+                        <div class="input-box">
+                            <input type="text" placeholder="Entrez votre nom" required>
+                        </div>
+                        <div class="input-box">
+                            <input type="email" placeholder="Entrez votre email" required>
+                        </div>
+                        <div class="input-box message-box">
+                            <textarea placeholder="Entrez votre message" required></textarea>
+                        </div>
+                        <div class="button">
+                            <input type="submit" value="Envoyer maintenant">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
