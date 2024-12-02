@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+/* Importation de la police "Noto Sans" */
+
+body, html {
+    height: auto;
+    width: 100%;
+    background: url(img/abstract-gradient-neon-lights.jpg);
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    /* Image de fond et application de la police "Roboto" */
+}
+.header {
+    height: 210px;
+    width: 100%;
+    display: flex;
+    /* En-tête avec flexbox */
+}
+
+.hlogo {
+    height: 100%;
+    width: 15%;
+    /* Dimensions pour le logo dans l'en-tête */
+}
+
+img {
+    height: 100%;
+    /* Image responsive */
+}
+
+.hpetit {
+    height: 25%;
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    /* Petites icônes ou images dans l'en-tête */
+}
+
+.hcategories {
+    height: 100%;
+    width: 60%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Zone des catégories centrée horizontalement */
+}
+
+.hcategories > ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* Liste des catégories sans puces */
+}
+
+.hcategories li {
+    position: relative;
+    /* Pour gérer les sous-menus */
+}
+
+.hcategories li a {
+    text-decoration: none;
+    color: white;
+    padding: 6px 20px;
+    display: block;
+    /* Liens des catégories avec padding */
+}
+
+.sous-classe {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    display: none;
+    background-color: transparent;
+    z-index: 10;
+    padding: 10px 0;
+    /* Sous-menu masqué par défaut */
+}
+
+.a-sous-classe:hover .sous-classe {
+    display: block;
+    /* Sous-menu visible au survol */
+}

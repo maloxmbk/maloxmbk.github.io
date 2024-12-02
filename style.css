@@ -1,69 +1,111 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-body,html{
+/* Importation de la police "Noto Sans" */
+
+body, html {
     height: auto;
     width: 100%;
     background: url(img/abstract-gradient-neon-lights.jpg);
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif;
+    /* Image de fond et application de la police "Roboto" */
 }
-@media (max-width: 990px){
+
+@media (max-width: 1467px) {
     .hlogo {
-        width: 40%;
         display: flex;
-        flex-direction: column;
-        
-    }
-    
-    .hcategories {
-        flex-direction: column;
-    }
-    
-    .hcategories > ul {
-        flex-direction: column;
+        /* Affichage flexible du logo pour les écrans moyens */
     }
 
+    .hcategories {
+        flex-direction: row;
+        /* Les catégories s'organisent en ligne */
+    }
+
+    .hcategories > ul {
+        flex-direction: row;
+    }
+
+    .jeux {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* Les sections "jeux" s'organisent en colonne */
+    }
 }
-.header{
+
+@media (max-width: 931px) {
+    .hlogo {
+        display: flex;
+        /* Ajustements pour les petits écrans */
+    }
+
+    .hcategories {
+        flex-direction: row;
+    }
+
+    .hcategories > ul {
+        flex-direction: row;
+    }
+
+    .jeux {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.header {
     height: 210px;
     width: 100%;
     display: flex;
+    /* En-tête avec flexbox */
 }
-.hlogo{
+
+.hlogo {
     height: 100%;
     width: 15%;
+    /* Dimensions pour le logo dans l'en-tête */
 }
-img{
+
+img {
     height: 100%;
+    /* Image responsive */
 }
-.hpetit{
+
+.hpetit {
     height: 25%;
     width: 25%;
     display: flex;
     flex-direction: row;
     background-color: transparent;
+    /* Petites icônes ou images dans l'en-tête */
 }
-.hmenu{
+
+.hmenu {
     height: 100%;
     width: 100%;
     background-color: transparent;
     text-align: right;
-    
+    /* Menu aligné à droite */
 }
-.installer{
+
+.installer {
     padding: 6px;
     margin: 15px;
     background-color: rgb(18, 145, 18);
     border-radius: 6px;
     cursor: pointer;
-    
+    /* Bouton "installer" avec un design distinct */
 }
-.connexion{
+
+.connexion {
     text-decoration: none;
     color: black;
     padding: 36px;
-
+    /* Lien "connexion" stylisé */
 }
+
 .hcategories {
     height: 100%;
     width: 60%;
@@ -71,17 +113,20 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+    /* Zone des catégories centrée horizontalement */
 }
 
 .hcategories > ul {
     display: flex;
     list-style: none;
-    padding: 0; 
-    margin: 0; 
+    padding: 0;
+    margin: 0;
+    /* Liste des catégories sans puces */
 }
 
 .hcategories li {
-    position: relative; 
+    position: relative;
+    /* Pour gérer les sous-menus */
 }
 
 .hcategories li a {
@@ -89,87 +134,68 @@ img{
     color: white;
     padding: 6px 20px;
     display: block;
+    /* Liens des catégories avec padding */
 }
 
 .sous-classe {
-    position: absolute; 
-    top: 100%; 
-    left: 0; 
+    position: absolute;
+    top: 100%;
+    left: 0;
     list-style: none;
-    display: none; 
-    background-color: transparent; 
-    z-index: 10; 
-    padding: 10px 0; 
+    display: none;
+    background-color: transparent;
+    z-index: 10;
+    padding: 10px 0;
+    /* Sous-menu masqué par défaut */
 }
 
 .a-sous-classe:hover .sous-classe {
-    display: block; 
+    display: block;
+    /* Sous-menu visible au survol */
 }
+
 .center {
     height: auto;
     width: 100%;
     text-align: center;
+    /* Centrage du contenu principal */
 }
 
 .image-clé {
     width: 100%;
-    height: 782px;
+    height: auto;
+    /* Image principale adaptative */
 }
-.jeux{
+
+.jeux {
     display: flex;
     justify-content: space-between;
     padding-bottom: 100px;
     margin-left: 80px;
     margin-right: 80px;
+    /* Section pour les jeux, bien espacée */
 }
-.bo6 {
-    width: auto;
-    height: 300px;
+
+.bo6, .fifa, .gta, .minecraft {
+    width: 300px;
+    height: 350px;
     margin-top: 80px;
     display: flex;
     flex-direction: column;
     transition: transform 0.3s;
+    /* Cartes des jeux avec animation au survol */
 }
-.bo6:hover{
+
+.bo6:hover, .fifa:hover, .gta:hover, .minecraft:hover {
     transform: scale(1.1);
+    /* Zoom sur les cartes de jeux au survol */
 }
-.fifa{
-    width: auto;
-    height: 300px;
-    margin-top: 80px;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s;
-}
-.fifa:hover{
-    transform: scale(1.1);
-}
-.gta{
-    width: auto;
-    height: 300px;
-    margin-top: 80px;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s;
-}
-.gta:hover{
-    transform: scale(1.1);
-}
-.minecraft {
-    width: auto;
-    height: 300px;
-    margin-top: 80px;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s;
-}
-.minecraft:hover{
-    transform: scale(1.1);
-}
+
 .footer {
     height: 40px;
     width: 100%;
     text-align: center;
     clear: both;
     margin-top: 20px;
+    /* Pied de page centré */
 }

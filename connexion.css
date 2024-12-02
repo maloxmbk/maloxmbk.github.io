@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-body,html{
+/* Importation de la police Roboto */
+
+body, html {
     margin: 0;
     padding: 0;
     display: flex;
@@ -8,44 +10,54 @@ body,html{
     background: url(img/jeux\ fond.webp) no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    /* Centrage du contenu avec une image de fond couvrant toute la fenêtre */
 }
-form{
+
+form {
     margin-top: 240px;
     background-color: rgb(255, 255, 255);
     padding: 50px;
     border-radius: 10px;
     min-width: 300px;
     text-align: center;
+    /* Formulaire centré avec une bordure arrondie et un fond blanc */
 }
 
-form h1{
+form h1 {
     color: rgb(105, 108, 116);
     text-align: center;
+    /* Titre stylisé au centre avec une couleur grise */
 }
 
-form .inputs{
+form .inputs {
     display: flex;
     flex-direction: column;
+    /* Organisation verticale des champs de saisie */
 }
-form .inputs input[type="text"], input[type="password"]{
+
+form .inputs input[type="text"], input[type="password"] {
     padding: 15px;
     border-radius: 20px;
     background-color: #ffffff;
     margin-bottom: 15px;
     border: black;
+    /* Champs de saisie arrondis avec des marges et un fond blanc */
 }
 
-form p.inscription{
+form p.inscription {
     font-size: 16px;
     margin-bottom: 20px;
     color: #878787;
     text-align: left;
-}
-form p.inscription span{
-    color: #f72a2a;
+    /* Texte d'inscription en gris avec un alignement à gauche */
 }
 
-form button{
+form p.inscription span {
+    color: #f72a2a;
+    /* Mise en évidence de certains mots avec une couleur rouge */
+}
+
+form button {
     padding: 15px 25px;
     border: none;
     border-radius: 5px;
@@ -55,27 +67,36 @@ form button{
     outline: none;
     cursor: pointer;
     transition: transform 0.2s;
-    
+    /* Bouton avec une couleur rougeâtre, sans bordure, et une transition d'agrandissement au survol */
 }
-form button:hover{
+
+form button:hover {
     transform: scale(1.1);
-
+    /* Effet d'agrandissement lors du survol */
 }
 
-form .souvenir_oublier{
+form .souvenir_oublier {
     display: flex;
     justify-content: space-between;
     font-size: 14.5px;
     margin: 15px 0 15px;
+    /* Section entre "Se souvenir de moi" et "Mot de passe oublié" avec un alignement horizontal */
 }
-.souvenir_oublier label input{
+
+.souvenir_oublier label input {
     accent-color: #000000;
     margin-right: 3px;
+    /* Personnalisation des cases à cocher */
 }
-.souvenir_oublier a{
+
+.souvenir_oublier a {
     color: #000000;
     text-decoration: none;
+    /* Liens en noir, sans soulignement */
 }
-.souvenir_oublier a:hover{
+
+.souvenir_oublier a:hover {
     text-decoration: underline;
+    /* Soulignement des liens lors du survol */
 }
+

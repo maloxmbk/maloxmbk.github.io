@@ -1,81 +1,99 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-body,html{
+/* Importation de la police "Noto Sans" */
+
+body, html {
     background: url(img/artistic-blurry-colorful-wallpaper-background.jpg) no-repeat;
     font-family: "Roboto", sans-serif;
     height: 100%;
     width: 100%;
     padding: 0;
     margin: 0;
+    /* Image de fond couvrant tout l'écran, avec une police Roboto */
 }
+
 @media (max-width: 890px) {
     .header {
         flex-direction: column;
+        /* Réorganisation des éléments de l'en-tête en colonne sur petits écrans */
     }
 
     .hlogo {
         margin-bottom: -30px;
+        padding-left: 100px;
+        /* Ajustement du logo pour mieux s'adapter */
     }
 
     .hcategories {
         margin-left: 0;
         padding-top: -70px;
+        /* Alignement des catégories */
     }
 
     .hcategories li a {
         padding: 6px 10px;
+        /* Réduction de l'espacement des liens */
     }
 
     details summary {
         font-size: 14px;
         padding: 12px 16px;
+        /* Taille et espacement ajustés pour le résumé des FAQ */
     }
 
     details .content {
         line-height: 1.6;
         padding: 12px;
+        /* Amélioration de la lisibilité du contenu */
     }
 }
 
 @media (max-width: 480px) {
-    .header {
-        padding: 5px;
+    .hlogo {
+        margin-left: -50px;
+        /* Ajustement supplémentaire pour le logo */
     }
 
-    .hcategories{
+    .hcategories {
         padding-bottom: -80px;
-    }
-
-    .hcategories > ul {
-        flex-direction: column;
-        align-items: center;
+        /* Alignement des catégories */
     }
 
     .hcategories li a {
         padding: 5px 8px;
         font-size: 12px;
+        /* Réduction de la taille des liens */
     }
 
     details summary {
         font-size: 12px;
         padding: 10px;
+        /* Résumé des FAQ encore plus compact */
     }
 
     details .content {
         padding: 10px;
+        /* Contenu des FAQ adapté */
     }
 }
-.header{
+
+.header {
     height: 270px;
     width: 100%;
     display: flex;
+    /* En-tête avec flexbox pour organiser les éléments horizontalement */
 }
-.hlogo{
+
+.hlogo {
     height: 100%;
     width: 15%;
+    /* Logo dans l'en-tête */
 }
-img{
+
+img {
     height: 260px;
+    /* Hauteur de l'image du logo */
 }
+
 .hcategories {
     height: 100%;
     width: 55%;
@@ -83,17 +101,20 @@ img{
     justify-content: center;
     align-items: center;
     margin-left: 120px;
+    /* Zone des catégories centrée horizontalement */
 }
 
 .hcategories > ul {
     display: flex;
     list-style: none;
-    padding: 0; 
-    margin: 0; 
+    padding: 0;
+    margin: 0;
+    /* Liste des catégories sans puces et avec flexbox */
 }
 
 .hcategories li {
-    position: relative; 
+    position: relative;
+    /* Pour permettre l'affichage des sous-menus */
 }
 
 .hcategories li a {
@@ -101,43 +122,55 @@ img{
     color: white;
     padding: 6px 20px;
     display: block;
+    /* Liens stylisés pour être clairs et accessibles */
 }
 
 .sous-classe {
-    position: absolute; 
-    top: 100%; 
-    left: 0; 
+    position: absolute;
+    top: 100%;
+    left: 0;
     list-style: none;
-    display: none; 
-    background-color: transparent; 
-    z-index: 10; 
-    padding: 10px 0; 
+    display: none;
+    background-color: transparent;
+    z-index: 10;
+    padding: 10px 0;
+    /* Sous-menu caché par défaut */
 }
 
 .a-sous-classe:hover .sous-classe {
-    display: block; 
+    display: block;
+    /* Affichage du sous-menu au survol */
 }
-.wrapper > h1{
+
+.wrapper > h1 {
     margin: 30px 0;
     text-align: center;
     letter-spacing: 3px;
+    /* Titre principal centré avec un espacement entre les lettres */
 }
-.faq-contenaire{
+
+.faq-contenaire {
     max-width: 600px;
     margin: 24px auto;
     padding-bottom: 30px;
+    /* Conteneur des FAQ avec une largeur maximale */
 }
-details summary .icon svg{
+
+details summary .icon svg {
     height: 24px;
     display: flex;
     rotate: -90deg;
+    /* Icône stylisée pour les résumés des FAQ */
 }
-details .content{
+
+details .content {
     padding: 16px;
-    line-height:1.8;
+    line-height: 1.8;
     margin-top: -10px;
+    /* Contenu des FAQ avec espacement et lisibilité optimisés */
 }
-details summary{
+
+details summary {
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -146,25 +179,35 @@ details summary{
     background: #1d3557;
     color: #fff;
     user-select: none;
-    transition: all 120ms ease; 
+    transition: all 120ms ease;
+    /* Résumé interactif avec une couleur de fond bleue et une transition fluide */
 }
-details{
+
+details {
     background: transparent;
     border-radius: 4px;
     overflow: hidden;
     margin-bottom: 40px;
-}
-details summary::-webkit-details-marker{
-    display: none;
+    /* Section FAQ avec une bordure arrondie et espacée */
 }
 
-details[open] summary{
+details summary::-webkit-details-marker {
+    display: none;
+    /* Suppression du style par défaut des indicateurs de détails */
+}
+
+details[open] summary {
     background: #0c1728;
     margin-bottom: 10px;
+    /* Résumé actif avec une couleur plus foncée */
 }
-details summary .icon{
+
+details summary .icon {
     transition: all 120ms ease;
+    /* Transition fluide pour l'icône */
 }
-details[open] summary .icon{
+
+details[open] summary .icon {
     rotate: 90deg;
+    /* Rotation de l'icône lorsque le résumé est ouvert */
 }

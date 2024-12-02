@@ -1,88 +1,109 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-*{
+/* Importation de la police Noto Sans */
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  /* Réinitialisation des marges et paddings + définition de la police par défaut */
 }
-body{
+
+body {
   height: 100%;
   width: 100%;
-  background: url(img/fond-violet.jpg) no-repeat;
-  margin: 0;
-  padding: 0;
+  background: url(img/fond-violet.jpg)  ;
+  background-size: cover;
+  background-position: unset;
+  /* Image de fond appliquée à tout le corps */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* Centrage du contenu */
 }
+
+/* Responsiveness: pour les écrans inférieurs à 950px */
 @media (max-width: 950px) {
+  .container {
+    width: 90%;
+    padding: 30px 40px 40px 35px;
+    /* Ajustement des dimensions du conteneur */
+  }
+
+  .container .content .coté-droit {
+    width: 75%;
+    margin-left: 55px;
+  }
+}
+
+/* Responsiveness: pour les écrans inférieurs à 820px */
+@media (max-width: 820px) {
+
+  .hlogo{
+    padding-left: 150px;
+  }
 
   .hcategories {
-    flex-direction: column;
+    padding-top: 210px;
+    padding-right: 90px;
   }
 
-  .hcategories > ul {
-    flex-direction: column;
-  }
-  .container{
-    width: 90%;
-    padding: 30px 40px 40px 35px ;
-  }
-  .container .content .coté-droit{
-   width: 75%;
-   margin-left: 55px;
-  }
-}
-@media (max-width: 820px) {
-  .container{
+  .container {
     margin: 40px 0;
     height: 100%;
+    /* Le conteneur prend plus de place */
   }
-  .container .content{
+
+  .container .content {
     flex-direction: column-reverse;
+    /* Inversement de l'ordre des colonnes */
   }
- .container .content .coté-gauche{
-   width: 100%;
-   flex-direction: row;
-   margin-top: 40px;
-   justify-content: center;
-   flex-wrap: wrap;
- }
- .container .content .coté-gauche::before{
-   display: none;
- }
- .container .content .coté-droit{
-   width: 100%;
-   margin-left: 0;
- }
+
+  .container .content .coté-gauche {
+    width: 100%;
+    flex-direction: row;
+    margin-top: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .container .content .coté-gauche::before {
+    display: none;
+    /* Suppression de la ligne de séparation sur petit écran */
+  }
+
+  .container .content .coté-droit {
+    width: 100%;
+    margin-left: 0;
+  }
 }
-.header{
+
+.header {
   height: 210px;
   width: 100%;
   display: flex;
   margin-left: 100px;
+  /* Structure du header */
 }
-.hlogo{
+
+.hlogo {
   height: 100%;
   width: 15%;
 }
-img{
+
+img {
   height: 100%;
+  /* Les images dans le header occupent toute leur hauteur disponible */
 }
-.hpetit{
+
+.hpetit {
   height: 25%;
   width: 25%;
   display: flex;
   flex-direction: row;
 }
-.hmenu{
-  height: 100%;
-  width: 100%;
-  background-color: rgb(255, 255, 255);
-  text-align: right;
-    
-}
+
 .hcategories {
   height: 100%;
   width: 60%;
@@ -90,17 +111,19 @@ img{
   display: flex;
   justify-content: center;
   align-items: center;
+  /* Alignement horizontal des catégories */
 }
 
 .hcategories > ul {
   display: flex;
   list-style: none;
-  padding: 0; 
-  margin: 0; 
+  padding: 0;
+  margin: 0;
+  /* Liste horizontale sans puces */
 }
 
 .hcategories li {
-  position: relative; 
+  position: relative;
 }
 
 .hcategories li a {
@@ -108,36 +131,42 @@ img{
   color: rgb(0, 0, 0);
   padding: 6px 20px;
   display: block;
+  /* Liens stylisés pour le menu */
 }
 
 .sous-classe {
-  position: absolute; 
-  top: 100%; 
-  left: 0; 
+  position: absolute;
+  top: 100%;
+  left: 0;
   list-style: none;
-  display: none; 
-  background-color: transparent; 
-  z-index: 10; 
-  padding: 10px 0; 
+  display: none;
+  background-color: transparent;
+  z-index: 10;
+  padding: 10px 0;
+  /* Sous-menu caché par défaut */
 }
 
 .a-sous-classe:hover .sous-classe {
-  display: block; 
+  display: block;
+  /* Affichage du sous-menu au survol */
 }
 
-.container{
+.container {
   width: 85%;
   background: #fff;
   border-radius: 6px;
   padding: 20px 60px 30px 40px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  /* Boîte centrale avec ombre portée et bordures arrondies */
 }
-.container .content{
+
+.container .content {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.container .content .coté-gauche{
+
+.container .content .coté-gauche {
   width: 25%;
   height: 100%;
   display: flex;
@@ -147,7 +176,8 @@ img{
   margin-top: 15px;
   position: relative;
 }
-.content .coté-gauche::before{
+
+.content .coté-gauche::before {
   content: '';
   position: absolute;
   height: 70%;
@@ -156,41 +186,51 @@ img{
   top: 50%;
   transform: translateY(-50%);
   background: #afafb6;
+  /* Ligne de séparation verticale */
 }
-.content .coté-gauche .details{
+
+.content .coté-gauche .details {
   margin: 14px;
   text-align: center;
 }
-.content .coté-gauche .details i{
+
+.content .coté-gauche .details i {
   font-size: 30px;
   color: #3e2093;
   margin-bottom: 10px;
 }
-.content .coté-gauche .details .topic{
+
+.content .coté-gauche .details .topic {
   font-size: 18px;
   font-weight: 500;
 }
+
 .content .coté-gauche .details .texte-un,
-.content .coté-gauche .details .texte-deux{
+.content .coté-gauche .details .texte-deux {
   font-size: 14px;
   color: #afafb6;
 }
-.container .content .coté-droit{
+
+.container .content .coté-droit {
   width: 75%;
   margin-left: 75px;
 }
-.content .coté-droit .topic-text{
+
+.content .coté-droit .topic-text {
   font-size: 23px;
   font-weight: 600;
   color: #3e2093;
 }
-.coté-droit .input-box{
+
+.coté-droit .input-box {
   height: 50px;
   width: 100%;
   margin: 12px 0;
+  /* Champs de saisie stylisés */
 }
+
 .coté-droit .input-box input,
-.coté-droit .input-box textarea{
+.coté-droit .input-box textarea {
   height: 100%;
   width: 100%;
   border: none;
@@ -200,18 +240,23 @@ img{
   border-radius: 6px;
   padding: 0 15px;
   resize: none;
+  /* Design arrondi pour les champs */
 }
-.coté-droit .message-box{
+
+.coté-droit .message-box {
   min-height: 110px;
 }
-.coté-droit .input-box textarea{
+
+.coté-droit .input-box textarea {
   padding-top: 6px;
 }
-.coté-droit .button{
+
+.coté-droit .button {
   display: inline-block;
   margin-top: 12px;
 }
-.coté-droit .button input[type="submit"]{
+
+.coté-droit .button input[type="submit"] {
   color: #fff;
   font-size: 18px;
   outline: none;
@@ -221,7 +266,10 @@ img{
   background: #3e2093;
   cursor: pointer;
   transition: all 0.3s ease;
+  /* Bouton stylisé avec transition */
 }
-.button input[type="submit"]:hover{
+
+.button input[type="submit"]:hover {
   background: #5029bc;
+  /* Couleur changeante au survol */
 }
