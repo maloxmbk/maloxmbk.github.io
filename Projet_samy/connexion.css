@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body,html{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+    background: url(img/jeux\ fond.webp) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+form{
+    margin-top: 240px;
+    background-color: rgb(255, 255, 255);
+    padding: 50px;
+    border-radius: 10px;
+    min-width: 300px;
+    text-align: center;
+}
+
+form h1{
+    color: rgb(105, 108, 116);
+    text-align: center;
+}
+
+form .inputs{
+    display: flex;
+    flex-direction: column;
+}
+form .inputs input[type="text"], input[type="password"]{
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    margin-bottom: 15px;
+    border: black;
+}
+
+form p.inscription{
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #878787;
+    text-align: left;
+}
+form p.inscription span{
+    color: #f72a2a;
+}
+
+form button{
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #fff;
+    background-color: #eb7371;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+    
+}
+form button:hover{
+    transform: scale(1.1);
+
+}
+
+form .souvenir_oublier{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: 15px 0 15px;
+}
+.souvenir_oublier label input{
+    accent-color: #000000;
+    margin-right: 3px;
+}
+.souvenir_oublier a{
+    color: #000000;
+    text-decoration: none;
+}
+.souvenir_oublier a:hover{
+    text-decoration: underline;
+}

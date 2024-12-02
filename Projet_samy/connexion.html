@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="connexion.css">
+        <!-- Titre de la page affiché dans l'onglet du navigateur -->
+        <title>Formulaire de Connexion</title> 
+    </head>
+    <body>
+        <!-- Début du formulaire de connexion -->
+        <form> 
+            <h1>Connexion</h1>
+            <div class="inputs"> 
+                <input type="text" placeholder="Nom d'utilisateur" required> <!-- Champ pour le nom d'utilisateur, requis -->
+                <input type="password" placeholder="Mot de passe" required> <!-- Champ pour le mot de passe, requis -->
+            </div>
+            <p class="inscription">
+                <!-- Texte pour inciter à s'inscrire -->
+                Pas encore <span>inscrit</span> ? Inscrivez-vous <a href="#"><span>ici</span></a>
+            </p>
+            
+            <div class="souvenir_oublier"> <!-- Conteneur pour les options de souvenir de connexion et mot de passe oublié -->
+                <label>
+                    <!-- Case à cocher pour se souvenir de l'utilisateur -->
+                    <input type="checkbox"> Se souvenir de moi 
+                </label>
+                <!-- Lien pour récupérer un mot de passe oublié -->
+                <a href="#">Mot de passe oublié?</a> 
+            </div>
+            <!-- Bouton pour soumettre le formulaire -->
+            <button type="submit">Se connecter</button> 
+        </form>
+    </body>
+</html>

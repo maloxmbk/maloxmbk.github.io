@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+body,html{
+    background: url(img/artistic-blurry-colorful-wallpaper-background.jpg) no-repeat;
+    font-family: "Roboto", sans-serif;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+@media (max-width: 890px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .hlogo {
+        margin-bottom: -30px;
+    }
+
+    .hcategories {
+        margin-left: 0;
+        padding-top: -70px;
+    }
+
+    .hcategories li a {
+        padding: 6px 10px;
+    }
+
+    details summary {
+        font-size: 14px;
+        padding: 12px 16px;
+    }
+
+    details .content {
+        line-height: 1.6;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 5px;
+    }
+
+    .hcategories{
+        padding-bottom: -80px;
+    }
+
+    .hcategories > ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hcategories li a {
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+
+    details summary {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    details .content {
+        padding: 10px;
+    }
+}
+.header{
+    height: 270px;
+    width: 100%;
+    display: flex;
+}
+.hlogo{
+    height: 100%;
+    width: 15%;
+}
+img{
+    height: 260px;
+}
+.hcategories {
+    height: 100%;
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 120px;
+}
+
+.hcategories > ul {
+    display: flex;
+    list-style: none;
+    padding: 0; 
+    margin: 0; 
+}
+
+.hcategories li {
+    position: relative; 
+}
+
+.hcategories li a {
+    text-decoration: none;
+    color: white;
+    padding: 6px 20px;
+    display: block;
+}
+
+.sous-classe {
+    position: absolute; 
+    top: 100%; 
+    left: 0; 
+    list-style: none;
+    display: none; 
+    background-color: transparent; 
+    z-index: 10; 
+    padding: 10px 0; 
+}
+
+.a-sous-classe:hover .sous-classe {
+    display: block; 
+}
+.wrapper > h1{
+    margin: 30px 0;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.faq-contenaire{
+    max-width: 600px;
+    margin: 24px auto;
+    padding-bottom: 30px;
+}
+details summary .icon svg{
+    height: 24px;
+    display: flex;
+    rotate: -90deg;
+}
+details .content{
+    padding: 16px;
+    line-height:1.8;
+    margin-top: -10px;
+}
+details summary{
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 24px;
+    background: #1d3557;
+    color: #fff;
+    user-select: none;
+    transition: all 120ms ease; 
+}
+details{
+    background: transparent;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+details summary::-webkit-details-marker{
+    display: none;
+}
+
+details[open] summary{
+    background: #0c1728;
+    margin-bottom: 10px;
+}
+details summary .icon{
+    transition: all 120ms ease;
+}
+details[open] summary .icon{
+    rotate: 90deg;
+}
