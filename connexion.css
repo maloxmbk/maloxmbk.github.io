@@ -17,8 +17,9 @@ form {
     margin-top: 240px;
     background-color: rgb(255, 255, 255);
     padding: 50px;
-    border-radius: 10px;
+    border-radius: 16px;
     min-width: 300px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
     text-align: center;
     /* Formulaire centré avec une bordure arrondie et un fond blanc */
 }

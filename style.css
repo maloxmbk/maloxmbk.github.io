@@ -37,11 +37,11 @@ body, html {
 @media (max-width: 931px) {
     .hlogo {
         display: flex;
-        /* Ajustements pour les petits écrans */
     }
 
     .hcategories {
-        flex-direction: row;
+        font-size: 12px;
+        padding-top: 70px;
     }
 
     .hcategories > ul {
@@ -52,6 +52,40 @@ body, html {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+}
+
+@media (max-width: 592px) {
+    .hlogo {
+        display: flex;
+        height: 40%;
+    }
+
+    .hcategories {
+        font-size: 12px;
+        padding-top: 70px;
+    }
+
+    .hcategories > ul {
+        flex-direction: row;
+    }
+
+    .jeux {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bo6, .fifa, .gta, .minecraft{
+        width: 250px;
+        height: 300px;
+    }
+
+    .hmenu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -140px;
     }
 }
 
